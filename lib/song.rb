@@ -32,7 +32,7 @@ class Song
   end
   
   def self.artist_count
-    
+    @@artists.reduce(Hash.new(0)) { |h, v| h.store(v, h[v] + 1); h }
   end
   
 end
