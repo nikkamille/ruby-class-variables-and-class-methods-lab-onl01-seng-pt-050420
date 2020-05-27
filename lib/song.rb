@@ -28,7 +28,7 @@ class Song
   end
   
   def self.genre_count
-    
+    @@genres.reduce(Hash.new(0)) { |h, v| h.store(v, h[v] + 1); h }
   end
   
   def self.artist_count
